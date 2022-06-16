@@ -1,0 +1,47 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "warn",
+      { "overrides": { "constructors": "no-public" } }
+    ],
+    "@typescript-eslint/no-use-before-define": ["warn", { "functions": false }],
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/no-parameter-properties": ["off"],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "ignoreRestSiblings": true }
+    ],
+    "no-plusplus": ["off"],
+    "class-methods-use-this": ["off"],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-restricted-syntax": ["warn"],
+    "no-await-in-loop": ["warn"],
+    "import/prefer-default-export": ["off"],
+    "prefer-promise-reject-errors": ["warn", { "allowEmptyReject": true }],
+    "no-empty-function": ["off"],
+    "no-unused-expressions": ["off"],
+    "no-return-assign": ["error", "except-parens"],
+    "no-useless-constructor": "off",
+    "no-multiple-empty-lines": "warn"
+  }
+}
